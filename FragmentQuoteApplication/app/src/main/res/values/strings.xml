@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FragmentQuoteApplication</string>
+    <string name="screen">Screen# %1$d</string>
+    <string name="some_quote">some quote</string>
+</resources>
