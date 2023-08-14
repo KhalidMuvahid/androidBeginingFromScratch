@@ -23,9 +23,6 @@ import com.example.fragmentbasicboxgame.fragments.AboutFragment
 import com.example.fragmentbasicboxgame.fragments.BoxSelectionFragment
 import com.example.fragmentbasicboxgame.fragments.MenuFragment
 import com.example.fragmentbasicboxgame.fragments.OptionFragment
-
-const val BOX_COUNT = "BOX_COUNT"
-const val TIMER_ENABLE = "TIMER_ENABLE"
 class MainActivity : AppCompatActivity(),Navigator {
 
     private lateinit var binding:ActivityMainBinding

@@ -28,7 +28,12 @@ class MenuFragment : Fragment(){
     ): View? {
         binding = FragmentMenuBinding.inflate(inflater,container,false)
 
-        navigator().listenResult(Options::class.java,viewLifecycleOwner){this.options=it}
+        navigator().listenResult(Options::class.java,viewLifecycleOwner,object :ResultListener<Options>{
+            override fun invoke(p1: Options) {
+                options = p1
+            }
+
+        })
         binding.openBoxButton.setOnClickListener { navigator().onOpenBox(options) }
         binding.optionsButton.setOnClickListener { navigator().onOptions(options) }
         binding.aboutButton.setOnClickListener { navigator().onAbout() }
