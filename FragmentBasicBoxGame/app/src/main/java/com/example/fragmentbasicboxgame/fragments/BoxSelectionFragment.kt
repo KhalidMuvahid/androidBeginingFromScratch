@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fragmentbasicboxgame.BOX_COUNT
 import com.example.fragmentbasicboxgame.Options
+import com.example.fragmentbasicboxgame.R
 import com.example.fragmentbasicboxgame.TIMER_ENABLE
+import com.example.fragmentbasicboxgame.contract.HasCustomTitle
 import com.example.fragmentbasicboxgame.databinding.FragmentBoxSelectionBinding
 
-class BoxSelectionFragment:Fragment() {
+class BoxSelectionFragment:Fragment(),HasCustomTitle {
 
     private lateinit var binding: FragmentBoxSelectionBinding
 
@@ -25,9 +27,6 @@ class BoxSelectionFragment:Fragment() {
     }
 
     companion object{
-
-
-
         fun newInstance(options: Options): BoxSelectionFragment{
             val args = Bundle()
             args.putInt(BOX_COUNT,options.box)
@@ -38,6 +37,7 @@ class BoxSelectionFragment:Fragment() {
         }
     }
 
+    override fun getTitleRes(): Int = R.string.select_box
 
 
 }

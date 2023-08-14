@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
 data class  Options(val box:Int,val isTimerEnable:Boolean) : Parcelable {
 
     companion object{
-        var Default:Options = Options(3,false)
+        val Default:Options = Options(3,false)
     }
 
 }

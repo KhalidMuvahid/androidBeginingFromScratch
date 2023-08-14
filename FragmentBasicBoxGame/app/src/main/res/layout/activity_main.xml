@@ -2,9 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id ="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/purple_700"
+        tools:title="Game Box"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white"/>
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
