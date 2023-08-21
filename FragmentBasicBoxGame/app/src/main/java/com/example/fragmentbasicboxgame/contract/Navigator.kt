@@ -21,6 +21,7 @@ interface Navigator {
     fun <T:Parcelable>publishResult(options: T)
 
     fun <T:Parcelable>listenResult(clazz:Class<T>,owner:LifecycleOwner,listener:ResultListener<T>)
+    fun showCongratulationsScreen()
 
 }
 

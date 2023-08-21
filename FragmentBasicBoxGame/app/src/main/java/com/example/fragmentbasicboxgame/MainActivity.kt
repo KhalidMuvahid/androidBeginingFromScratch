@@ -21,6 +21,7 @@ import com.example.fragmentbasicboxgame.contract.ResultListener
 import com.example.fragmentbasicboxgame.databinding.ActivityMainBinding
 import com.example.fragmentbasicboxgame.fragments.AboutFragment
 import com.example.fragmentbasicboxgame.fragments.BoxSelectionFragment
+import com.example.fragmentbasicboxgame.fragments.CongratulationsFragment
 import com.example.fragmentbasicboxgame.fragments.MenuFragment
 import com.example.fragmentbasicboxgame.fragments.OptionFragment
 class MainActivity : AppCompatActivity(),Navigator {
@@ -103,6 +104,10 @@ class MainActivity : AppCompatActivity(),Navigator {
         supportFragmentManager.setFragmentResultListener(clazz.name,owner, FragmentResultListener { key,bundle ->
             listener.invoke(bundle.getParcelable(KEY_RESULT)!!)
         })
+    }
+
+    override fun showCongratulationsScreen() {
+        launchFragment(CongratulationsFragment())
     }
 
 
